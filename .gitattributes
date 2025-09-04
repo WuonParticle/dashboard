@@ -1,6 +1,27 @@
-# Set default behavior to automatically normalize line endings with LF
-* text=auto eol=lf
+# Basic .gitattributes for a python repo.
 
-# Special diff drivers
-*.py diff=python
-*.md diff=markdown
+# Source files
+# ============
+*.pxd    text diff=python eol=lf
+*.py     text diff=python eol=lf
+*.py3    text diff=python eol=lf
+*.pyw    text diff=python eol=lf
+*.pyx    text diff=python eol=lf
+*.pyz    text diff=python eol=lf
+*.pyi    text diff=python eol=lf
+
+# Binary files
+# ============
+*.db     binary
+*.p      binary
+*.pkl    binary
+*.pickle binary
+*.pyd    binary
+
+# Jupyter notebook
+*.ipynb  text eol=lf
+
+# Note: .db, .p, and .pkl files are associated
+# with the python modules ``pickle``, ``dbm.*``,
+# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
+# (among others).
